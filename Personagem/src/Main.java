@@ -6,8 +6,8 @@ public class Main {
         personagem1.nome = "Arthur Morgan";
         personagem2.nome = "Joel";
 
-        personagem1.receberDano(30);
-        personagem2.receberDano(50);
+        personagem1.receberDano(120);
+        personagem2.receberDano(150);
         personagem2.curar(20);
 
         System.out.println(personagem1.nome + " está com " + personagem1.vida + " de vida.");
