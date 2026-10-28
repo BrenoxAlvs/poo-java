@@ -1,11 +1,21 @@
 public class ContaBancaria {
     String titular;
-    double saldo = 100;
+    double saldo = 50;
 
     void depositar(double valor){
-        saldo = saldo + valor;
+        if (valor > 0) {
+            saldo = saldo + valor;
+            System.out.println("DEPÓSITO REALIZADO PARA: " + titular);
+        } else {
+            System.out.println("VALOR INVÁLIDO.");
+        }
     }
     void sacar(double valor){
-        saldo = saldo - valor;
+        if (saldo > 0 && valor <= saldo) {
+            saldo = saldo - valor;
+            System.out.println("\nSAQUE REALIZADO PARA: " + titular);
+        } else {
+            System.out.println("\nSAQUE INVÁLIDO OU SALDO INSUFICIENTE.");
+        }
     }
 }
